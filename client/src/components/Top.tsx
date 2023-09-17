@@ -9,6 +9,9 @@ const Top = () => {
             </span>
           </div>
           <div className="col-8 text-center fs-4">Bushwick Public House</div>
+          <div className="col-2">
+            <img className="s" src="/s.svg" alt="" height="45px" />
+          </div>
         </div>
       </div>
       <div className="row px-2 pt-2">

@@ -59,8 +59,9 @@ body {
 }
 
 .circle2 p {
-  position: relative;
-  top: 9px;
+  background-color: rgb(169, 244, 248);
+  padding: 5px;
+  border-radius: 1000% !important;
 }
 
 .footer {
@@ -86,8 +87,15 @@ body {
 
 .sticky {
   position: sticky;
-  top: 258px; /* Stick to the top of the viewport */
+  top: 269px; /* Stick to the top of the viewport */
   background-color: #f0f0f0;
   padding: 10px;
   z-index: 100;
+}
+
+.s {
+  background-color: var(--bs-primary);
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid var(--bs-secondary);
 }
