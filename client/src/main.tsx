@@ -11,6 +11,7 @@ import { Provider } from "react-redux";
 import App from "./App.tsx";
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "./scss/bootstrap.scss";
+import "./scss/styles.scss";
 import "./index.css";
 import PrivateRoute from "./components/PrivateRoute.tsx";
 import HomeScreen from "./screens/HomeScreen.tsx";
