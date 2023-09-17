@@ -43,12 +43,14 @@ const Header = () => {
 
   console.log(weekDays);
   return (
-    <header className="sticky-top bg-white border-bottom border-1">
-      <Top />
-      <hr />
-      <Calendar formattedDate={formattedDate} weekDays={weekDays} />
+    <>
+      <header className="sticky-top bg-white border-bottom border-1">
+        <Top />
+        <hr />
+        <Calendar formattedDate={formattedDate} weekDays={weekDays} />
+      </header>
       <Week weekDays={weekDays} />
-    </header>
+    </>
   );
 };
 

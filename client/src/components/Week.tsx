@@ -7,7 +7,7 @@ interface WeekProps {
 
 const Week = ({ weekDays }: WeekProps) => {
   return (
-    <>
+    <div className="border-top border-2">
       {weekDays.map((day, index) => {
         const dayOfMonth = day.getDate();
         const month = day.toLocaleDateString("en-US", { month: "short" });
@@ -22,7 +22,7 @@ const Week = ({ weekDays }: WeekProps) => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 

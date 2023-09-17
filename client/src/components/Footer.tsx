@@ -1,69 +1,36 @@
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
-import { useAppSelector, useAppDispatch } from "../hooks/reduxHooks";
-import { useNavigate } from "react-router-dom";
-import { LinkContainer } from "react-router-bootstrap";
-import { useLogoutMutation } from "../slices/usersApiSlice";
-import { removeCredentials } from "../slices/authSlice";
+import {
+  RiHome2Line,
+  RiMoneyDollarCircleLine,
+  RiCalendarCheckFill,
+} from "react-icons/ri";
+import { SlSpeech } from "react-icons/sl";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
-  const { userInfo } = useAppSelector((state) => state.auth);
-
-  const dispatch = useAppDispatch();
-  const navigate = useNavigate();
-
-  const [logout] = useLogoutMutation();
-
-  const logoutHandler = async () => {
-    try {
-      await logout().unwrap();
-      dispatch(removeCredentials());
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
-    <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
-        <Container>
-          <LinkContainer to="/">
-            <Navbar.Brand>MERN-AUTH</Navbar.Brand>
-          </LinkContainer>
-
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
-              {userInfo ? (
-                <>
-                  <NavDropdown title={userInfo.name} id="username">
-                    <LinkContainer to="/profile">
-                      <NavDropdown.Item>Profile</NavDropdown.Item>
-                    </LinkContainer>
-                    <NavDropdown.Item onClick={logoutHandler}>
-                      Logout
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </>
-              ) : (
-                <>
-                  <LinkContainer to="/login">
-                    <Nav.Link>
-                      <FaSignInAlt /> Login
-                    </Nav.Link>
-                  </LinkContainer>
-                  <LinkContainer to="/register">
-                    <Nav.Link>
-                      <FaSignOutAlt /> Register
-                    </Nav.Link>
-                  </LinkContainer>
-                </>
-              )}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <header className="footer">
+      <div className="d-flex flex-row justify-content-around align-items-center">
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <RiHome2Line className="fs-1 text" />
+          <p className="text-tiny text-dark">Home</p>
+        </div>
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <RiCalendarCheckFill className="fs-1 text-primary" />
+          <p className="text-tiny text-primary">Schedule</p>
+        </div>
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <RiMoneyDollarCircleLine className="fs-1" />
+          <p className="text-tiny">Money</p>
+        </div>
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <SlSpeech className="fs-1" />
+          <p className="text-tiny">Messages</p>
+        </div>
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          <GiHamburgerMenu className="fs-1" />
+          <p className="text-tiny">More</p>
+        </div>
+      </div>
     </header>
   );
 };
