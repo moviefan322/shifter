@@ -1,8 +1,8 @@
 const Top = () => {
   return (
     <>
-      <div className="container pt-3">
-        <div className="row">
+      <div className="pt-3">
+        <div className="row d-flex flex-row">
           <div className="col-2">
             <span className="circle2">
               <p>PN</p>
@@ -14,7 +14,7 @@ const Top = () => {
           </div>
         </div>
       </div>
-      <div className="row px-2 pt-2">
+      <div className="row px-2 pt-2 d-flex">
         <div
           className="btn-group col-12"
           role="group"

@@ -15,7 +15,7 @@ interface DayProps {
 
 const Day = ({ currentDay, daySchedule }: DayProps) => {
   return (
-    <section>
+    <section className="day">
       <div className="bg-gray custompad pb-5 border-2 sticky">
         <div className="container">
           <p className="date fw-bold">{currentDay}</p>

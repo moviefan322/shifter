@@ -119,8 +119,8 @@ export const schedule = [
       {
         start: "19:45",
         end: "04:00",
-        initials: "PN",
-        name: "Phil N.",
+        initials: "ED",
+        name: "Eric D.",
         role: "Bartender",
         duration: "6 hr",
         location: "Bushwick Public House",

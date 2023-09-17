@@ -2,6 +2,7 @@ body {
   margin: 0 0 78px 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .small {
@@ -82,7 +83,7 @@ body {
 }
 
 .day {
-  width: 90%;
+  position: relative;
 }
 
 .sticky {
