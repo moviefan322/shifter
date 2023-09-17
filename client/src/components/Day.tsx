@@ -16,12 +16,12 @@ interface DayProps {
 const Day = ({ currentDay, daySchedule }: DayProps) => {
   return (
     <section>
-      <div className="bg-gray custompad pb-5 border-2">
+      <div className="bg-gray custompad pb-5 border-2 sticky">
         <div className="container">
           <p className="date fw-bold">{currentDay}</p>
         </div>
       </div>
-      <div className="border-top border-2">
+      <div className="">
         {daySchedule.shifts.map((shift, index) => (
           <div key={index} className="row border-bottom border-3 py-3">
             <div className="col-3">
